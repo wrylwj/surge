@@ -1,4 +1,4 @@
-/*
+/* 
 东东超市兑换奖品 脚本地址：https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_blueCoin.js
 感谢@yangtingxiao提供PR
 更新时间：2020-12-24
