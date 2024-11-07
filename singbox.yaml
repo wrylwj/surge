@@ -96,7 +96,12 @@
       "type": "selector",
       "outbounds": [
         "auto",
-        "direct"
+        "direct",
+        "🇭🇰 VM-HK",
+        "🇭🇰 BWG-HK",
+        "🇺🇸 Oracle-US",
+        "🇰🇷 Oracle-KR",
+        "🇯🇵 Azure-JP"
       ]
     },
     {
@@ -309,7 +314,8 @@
       "tag": "HongKong",
       "type": "selector",
       "outbounds": [
-        "Proxy"
+        "🇭🇰 VM-HK",
+        "🇭🇰 BWG-HK"
       ]
     },
     {
@@ -330,28 +336,32 @@
       "tag": "Japan",
       "type": "selector",
       "outbounds": [
-        "Proxy"
+        "🇯🇵 Azure-JP"
       ]
     },
     {
       "tag": "America",
       "type": "selector",
       "outbounds": [
-        "Proxy"
+        "🇺🇸 Oracle-US"
       ]
     },
     {
       "tag": "Others",
       "type": "selector",
       "outbounds": [
-        "Proxy"
+        "🇰🇷 Oracle-KR"
       ]
     },
     {
       "tag": "auto",
       "type": "urltest",
       "outbounds": [
-        "Proxy"
+        "🇭🇰 VM-HK",
+        "🇭🇰 BWG-HK",
+        "🇺🇸 Oracle-US",
+        "🇰🇷 Oracle-KR",
+        "🇯🇵 Azure-JP"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
@@ -368,6 +378,121 @@
     {
       "type": "block",
       "tag": "block"
+    },
+    {
+      "tag": "🇭🇰 VM-HK",
+      "type": "vless",
+      "server": "vm.wryhf.com",
+      "server_port": 42553,
+      "uuid": "dff32e04-8926-4230-a813-69fe042a29f0",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.icloud.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "4comh-7Jm_wZXJQ5QiLSCbVGQIbMUzHUIBdb0aFtLzM",
+          "short_id": "22"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇭🇰 BWG-HK",
+      "type": "vless",
+      "server": "hk.wryhf.com",
+      "server_port": 59196,
+      "uuid": "cc44b066-2b7e-4c49-dfd6-b470d106c0c4",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.icloud.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "W9BjX6YmCIVsjhKMlz233Yoe0xcf0SVHfvPKqbf3vCg",
+          "short_id": "22"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇺🇸 Oracle-US",
+      "type": "vless",
+      "server": "sj.wryhf.com",
+      "server_port": 32375,
+      "uuid": "29cb7fdb-24ff-41e1-f131-b69882ed4d45",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.icloud.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "rwpbqas_HY8knlW0fFSIeUrjgBXHBzSNboflsLD8elA",
+          "short_id": "44"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇰🇷 Oracle-KR",
+      "type": "vless",
+      "server": "kr.wryhf.com",
+      "server_port": 58144,
+      "uuid": "a88ad341-35f7-450a-f800-391154207605",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.icloud.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "cDaDzPr3PlS3NM8lreHZbdo-Mhqz8vMBzMSkHXhGIUA",
+          "short_id": "22"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇯🇵 Azure-JP",
+      "type": "vless",
+      "server": "jp.wryhf.com",
+      "server_port": 27593,
+      "uuid": "c9ce9ccb-6cbd-48cc-fd01-84e406ee9339",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.icloud.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY",
+          "short_id": "22"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
     }
   ],
   "route": {
